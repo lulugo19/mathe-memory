@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+  text-align: center;
+  background-color: teal;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#board {
+  width: 95vh;
+  height: 95vh;
+  background-color: rgb(130, 231, 110);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#endpanel {
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  background-color: rgb(27, 116, 24);
+  color: whitesmoke;
+  border-radius: 18px;
+  border: 10px solid rgb(7, 70, 5);
+  box-shadow: 8px 8px 5px rgba(54, 52, 52, 0.623);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  visibility: hidden;
+  transform: scale(0);
+}
+
+#endpanel.show {
+  visibility: visible;
+  animation: popup 0.8s ease 0.3s 1 forwards;
+}
+
+#success-message {
+  font-size: 10vh;
+  margin-bottom: 1vh;
+}
+
+#num-tries-message {
+  font-size: 4vh;
+}
+
+#btn-play-again {
+  font-size: 4vh;
+  background-color: #50bb53; /* Green */
+  font-weight: bolder;
+  border: none;
+  color: whitesmoke;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 6px 6px rgba(48, 47, 47, 0.322);
+  transition: 0.3s;
+}
+
+#btn-play-again:hover {
+  transform: scale(1.2);
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-container {
+  width: 20%;
+  height: 20%;
+  margin: 5px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 4px 4px 5px rgba(31, 30, 30, 0.384);
+}
+
+.card-container:not(.flipped):hover .card-inner {
+  transform: rotateY(-20deg);
+}
+
+.card-container.flipped .card-inner {
+  transform: rotateY(-180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: rgb(241, 168, 58);
+  border: 10px solid rgb(233, 85, 16);
+  color: rgb(231, 48, 16);
+}
+
+.card-back {
+  background-color: rgb(100, 173, 247);
+  border: 10px solid rgb(45, 87, 165);
+  transform: rotateY(-180deg);
+  transition: 0.8s;
+}
+
+.solved .card-back {
+  background-color: rgb(146, 245, 127);
+  border: 10px solid rgb(59, 136, 43);
+}
+
+.card-text {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Source Code Pro", monospace;
+}
+
+.card-front .card-text {
+  font-size: 18vh;
+  font-family: "Source Code Pro", monospace;
+}
+
+.card-back .card-text {
+  font-size: 12vh;
+  color: rgb(13, 51, 122);
+}
+
+.solved .card-back .card-text {
+  color: rgb(18, 83, 10);
+}
+
+.card-back .card-text.question {
+  font-size: 7vh;
+}
+
+#tries {
+  position: absolute;
+  margin: 0;
+  left: 85vw;
+  top: 2.5vh;
+  font-size: 8vh;
+  color: rgb(225, 241, 4);
+}
+
+#num-tries {
+  font-size: 18vh;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap");

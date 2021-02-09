@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathe Memory</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <!--Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <h1 id="tries">Versuche</br><span id="num-tries">0</span></h1>
+    <div id="board">
+      <div id="endpanel">
+        <h2 id="success-message">Fantastisch!</h2>
+        <h2 id="num-tries-message">
+          Ihr habt <span id="num-tries-value">10</span> Versuche benötigt.
+        </h2>
+        <button id="btn-play-again">Nochmal Spielen</button>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">A</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">B</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">C</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">D</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">E</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">F</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">G</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">H</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">I</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">J</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">K</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">L</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">M</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">N</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">O</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-container normal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 class="card-text">P</h2>
+          </div>
+          <div class="card-back">
+            <h2 class="card-text">Back</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="game.js" type="text/babel"></script>
+  </body>
+</html>
