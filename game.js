@@ -33,8 +33,8 @@ function randomEl(arr) {
 const OPERATORS = {
   "+": (a, b) => a + b,
   "-": (a, b) => a - b,
-  x: (a, b) => a * b,
-  ":": (a, b) => a / b,
+  /*x: (a, b) => a * b,
+  ":": (a, b) => a / b,*/
 };
 
 function createMathProblem(operator, excludedSet) {
@@ -44,12 +44,11 @@ function createMathProblem(operator, excludedSet) {
     switch (operator) {
       case "+":
         a = Math.floor(Math.random() * 19 + 1);
-        b = Math.floor(Math.random() * 9 + 1);
+        b = Math.floor(Math.random() * (20 - a) + 1);
         break;
       case "-":
-        a = Math.floor(Math.random() * 30 + 1);
-        b = Math.floor(Math.random() * 9 + 1);
-        [a, b] = [Math.max(a, b), Math.min(a, b)];
+        a = Math.floor(Math.random() * 20 + 1);
+        b = Math.min(Math.floor(Math.random() * 9 + 1), a);
         break;
       case "x":
         a = Math.floor(Math.random() * 10 + 1);
